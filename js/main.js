@@ -11,6 +11,10 @@ $(function() {
 
 
 
+$('.header__btn-menu').on('click', function () {
+  $('.menu').toggleClass('menu--open');
+});
+
 
 $(function() {
     $('.top__slider').slick({
@@ -30,7 +34,44 @@ $(function() {
     slidesToScroll: 10,
     dots: true,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1700,
+        settings: {
+          slidesToShow: 8,
+          slidesToScroll: 8,
+        }
+      },
+      {
+        breakpoint: 1370,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 6,
+        }
+      },
+      {
+        breakpoint: 1040,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        }
+      }
+      ,
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      }
       
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+      // responsive: [
+      //   breakpoint :
+      // ]
   });
 })
 

@@ -17,6 +17,9 @@
         border: none;
         cursor: pointer;
     }
+    &__btn-menu{
+        display: none;
+    }
 }
 
 .logo {
@@ -258,6 +261,9 @@
         &::after {
             content: '';
             background-image: url(../images/slider-bg.jpg);
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
             position: absolute;
             width: 100%;
             height: 722px;
@@ -651,9 +657,10 @@
     background: rgba(#DFDFDF, .5 );
     padding: 13px 14px;
     position: relative;
-    z-index: 999;
+    z-index: 10;
     &__list{
         display: flex;
+        overflow-x: auto;
     }
     &__item::after{
         content: '/';
@@ -1355,3 +1362,6 @@ border-radius: 14px;
 }
 
 
+
+
+@import 'media';
